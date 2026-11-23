@@ -1,0 +1,41 @@
+# What the shop's products are made of (Session 7, Stage 16).
+# A second hierarchy, beside the taxonomy: oak "is a" wood, so a question about wooden products
+# finds the oak bookends. Fictitious, written for this unit; the decisions marked "decided" were
+# taken by the shop's owner and are recorded here, where the next person to change the file will see them.
+#
+# A product's material is recorded only where its description names it (kg/products.csv); a product
+# with no material recorded is not known to be made of nothing.
+
+materials:
+  - {id: wood, name: Wood}
+  - {id: oak, name: Oak, is_a: wood}
+  - {id: walnut, name: Walnut, is_a: wood}
+  - {id: olive-wood, name: Olive wood, is_a: wood}
+  - {id: plant-fibre, name: Plant fibre}
+  - {id: bamboo, name: Bamboo, is_a: plant-fibre}   # decided: bamboo is a grass, not wood
+  - {id: rattan, name: Rattan, is_a: plant-fibre}   # decided: rattan is a palm, not wood
+  - {id: textile, name: Textile}
+  - {id: cotton, name: Cotton, is_a: textile}
+  - {id: linen, name: Linen, is_a: textile}
+  - {id: canvas, name: Canvas, is_a: textile}
+  - {id: silk, name: Silk, is_a: textile}
+  - {id: wool, name: Wool, is_a: textile}
+  - {id: cashmere, name: Cashmere, is_a: wool}
+  - {id: merino-wool, name: Merino wool, is_a: wool}
+  - {id: metal, name: Metal}
+  - {id: brass, name: Brass, is_a: metal}
+  - {id: copper, name: Copper, is_a: metal}
+  - {id: cast-iron, name: Cast iron, is_a: metal}
+  - {id: stainless-steel, name: Stainless steel, is_a: metal}
+  - {id: enamelled-steel, name: Enamelled steel, is_a: metal}   # decided: classed by its body, steel
+  - {id: ceramic, name: Ceramic}
+  - {id: stoneware, name: Stoneware, is_a: ceramic}
+  - {id: terracotta, name: Terracotta, is_a: ceramic}
+  - {id: glass, name: Glass}
+  - {id: crystal, name: Crystal, is_a: glass}
+  - {id: stone, name: Stone}
+  - {id: granite, name: Granite, is_a: stone}
+  - {id: leather, name: Leather}
+  - {id: paper, name: Paper}
+  - {id: wax, name: Wax}
+  - {id: beeswax, name: Beeswax, is_a: wax}

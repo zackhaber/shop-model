@@ -1,0 +1,16 @@
+# Products that go with each other, stated once between categories (Session 7, Stage 16).
+# A rule says that any product in the first category, or in a narrower one, goes with any product in the
+# second, and the reverse: complements are symmetric. Pairs of products are derived from the rules, not
+# written one by one, so a new product receives its complements as soon as it is placed in a category.
+# Fictitious, written for this unit by the shop's owner; the reason is recorded with each rule.
+rules:
+  - {categories: [candle-holders, candles], reason: a holder is sold with what it holds}
+  - {categories: [serveware, utensils], reason: boards and trays are laid with servers and spoons}
+  - {categories: [dinnerware, table-linen], reason: plates are set on runners, napkins and placemats}
+  - {categories: [tea-coffee, drinkware], reason: a teapot is poured into mugs and tumblers}
+  - {categories: [cookware, kitchen-textiles], reason: hot dishes are handled with gloves and towels}
+  - {categories: [bedding, cushions], reason: a made bed is dressed with cushions}
+  - {categories: [throws-blankets, cushions], reason: a sofa is dressed with a throw and cushions}
+  - {categories: [plants-pots, garden-tools], reason: plants and pots need watering and care}
+  - {categories: [cards, gift-wrap], reason: a gift is wrapped and sent with a card}
+  - {categories: [travel, leather-goods], reason: travel goods are carried with small leather goods}

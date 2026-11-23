@@ -1,0 +1,31 @@
+# The shop's controlled vocabulary (Session 7, Stage 16).
+# The words staff use, each mapped to one concept: a department, category or subcategory in
+# kg/taxonomy.yaml, a range, or a material in kg/materials.yaml. A word that is not listed here
+# means nothing to the knowledge route.
+
+terms:
+  kitchen: kitchen-dining
+  kitchenware: kitchen-dining
+  dining: kitchen-dining
+  cookware: cookware
+  tableware: tableware
+  candle: candles
+  candles: candles
+  fragrance: home-fragrance
+  home fragrance: home-fragrance
+  throw: throws-blankets
+  throws: throws-blankets
+  blanket: throws-blankets
+  blankets: throws-blankets
+  garden: garden
+  gardening: garden
+  stationery: stationery
+  travel: travel
+  wood: wood
+  wooden: wood
+  timber: wood
+  premium: premium
+  premium range: premium
+  luxury: premium
+  gift set: gift-sets
+  gift sets: gift-sets

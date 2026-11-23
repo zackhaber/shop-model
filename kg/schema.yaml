@@ -1,0 +1,37 @@
+# The schema of the shop's knowledge layer (Session 7, Stage 16): Shop knowledge v1.0, Christmas 2026 catalogue.
+# Written after the competency questions (kg/questions.yaml) and before the instance files, which must conform to
+# it; tests/test_knowledge.py checks every file against it. Fictitious, written for this unit. Owner: the shop's
+# owner, who reviews every change.
+#
+# min and max are cardinalities: how many of the relationship each instance of the first class must have.
+# max: null means no upper limit.
+version: "1.0"
+owner: the shop's owner
+
+classes:
+  Department: {key: id, file: kg/taxonomy.yaml, description: the top level of the taxonomy}
+  Category:   {key: id, file: kg/taxonomy.yaml, description: a category or subcategory, a kind of its broader concept}
+  Material:   {key: id, file: kg/materials.yaml, description: what a product is made of, a kind of its broader material}
+  Range:      {key: id, file: kg/taxonomy.yaml, description: a range the shop sells, core or premium}
+  Product:    {key: product_id, file: kg/products.csv, description: a thing the shop sells, listed or not yet listed}
+  GiftSet:    {key: product_id, file: kg/products.csv, is_a: Product, description: a product made of other products}
+  Term:       {key: text, file: kg/synonyms.yaml, description: a word staff use}
+  Listing:    {key: [listed_at, product_id, price], file: data/, description: one product on sale on one day at one price}
+
+properties:
+  - {class: Product, name: name, type: string, required: true}
+  - {class: Range, name: launched, type: date, required: false}
+  - {class: Listing, name: listed_at, type: date, required: true}
+  - {class: Listing, name: price, type: decimal, required: true}
+  - {class: Listing, name: sold, type: boolean, required: true}
+
+relationships:
+  - {name: IN_CATEGORY, from: Product, to: [Category], min: 1, max: null}
+  - {name: IN_RANGE, from: Product, to: [Range], min: 1, max: 1}
+  - {name: MADE_OF, from: Product, to: [Material], min: 0, max: 1}
+  - {name: BROADER, from: Category, to: [Category, Department], min: 1, max: 1}
+  - {name: BROADER, from: Material, to: [Material], min: 0, max: 1}
+  - {name: CONTAINS, from: GiftSet, to: [Product], min: 2, max: null}
+  - {name: GOES_WITH, from: Category, to: [Category], min: 0, max: null, symmetric: true}
+  - {name: MEANS, from: Term, to: [Department, Category, Range, Material], min: 1, max: 1}
+  - {name: OF, from: Listing, to: [Product], min: 1, max: 1}

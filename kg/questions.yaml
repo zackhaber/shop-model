@@ -1,0 +1,134 @@
+# The questions staff ask about the shop (Session 7, Stage 16), with the answers the shop expects.
+# Fictitious: the expected answers are the shop owner's, written from what the owner knows about
+# every product. shop-ask scores each route against them.
+#
+# terms      the words in the question that carry its meaning
+# max_price  a price ceiling, before VAT, as in the listings
+# sold       true: only listings that sold
+# expected   the products that answer the question, by product_id from kg/products.csv
+
+questions:
+  - id: kitchen
+    question: Which kitchen and dining products have sold at least once for under 25 euro before VAT?
+    terms: [kitchen]
+    max_price: 25
+    sold: true
+    expected:
+      - apron-striped-canvas
+      - bamboo-coaster-set
+      - cast-iron-trivet
+      - ceramic-coffee-mug
+      - cotton-tea-towel-set
+      - enamel-pie-dish
+      - glass-carafe
+      - glass-storage-jar
+      - linen-napkins-set
+      - mortar-and-pestle
+      - olive-wood-salad-servers
+      - oven-gloves
+      - stoneware-dinner-plate
+      - wooden-chopping-board
+
+  - id: premium
+    question: Which products in the premium range have sold at least once?
+    terms: [premium]
+    sold: true
+    expected:
+      - cashmere-throw-charcoal
+      - copper-cocktail-set
+      - crystal-decanter
+      - leather-weekender-bag
+      - linen-bedding-set-double
+      - oak-bookends
+      - walnut-serving-board
+
+  - id: candles
+    question: Which candles and home fragrance products have sold?
+    terms: [candle, fragrance]
+    sold: true
+    expected:
+      - beeswax-candle
+      - reed-diffuser-orange-blossom
+      - scented-candle-fig-cedar
+
+  # Bamboo is not wood (kg/materials.yaml), so the bamboo coasters are not here, although they sold.
+  - id: wooden
+    question: Which wooden products have sold?
+    terms: [wood]
+    sold: true
+    expected:
+      - oak-bookends
+      - olive-wood-salad-servers
+      - wall-clock-oak
+      - walnut-serving-board
+      - wooden-chopping-board
+
+  # The water bottle is in two categories, Outdoor and Travel (kg/product_categories.csv).
+  - id: travel
+    question: Which travel products have sold?
+    terms: [travel]
+    sold: true
+    expected:
+      - leather-weekender-bag
+      - water-bottle-750
+
+  # The catalogue holds products the listings do not: they have never been listed (Christmas 2026 catalogue).
+  - id: catalogue
+    question: Which kitchen and dining products in the catalogue have never been listed?
+    terms: [kitchen]
+    listed: false
+    expected:
+      - bamboo-serving-tray
+      - cast-iron-skillet
+      - enamel-baking-tray
+      - glass-tumbler-set
+      - linen-table-runner
+      - olive-wood-spoon-set
+      - rattan-placemats
+      - stoneware-side-plate
+      - walnut-cheese-board
+
+  # Your turn (Section 5.7): predict the keyword route's answer before you run it.
+  - id: blankets
+    question: Which blankets have sold?
+    terms: [blanket]
+    sold: true
+    expected:
+      - cashmere-throw-charcoal
+      - wool-throw-blanket-grey
+
+# Questions about relationships between products (Stage 17). The knowledge route of Stage 16 cannot answer them
+# without new code; the graph answers each with one query (shop-kg ask). Their expected answers are checked in
+# tests/test_knowledge.py against the files.
+relationship_questions:
+  # Complements are derived from the rules in kg/complements.yaml, not tagged product by product.
+  - id: cross-sell
+    kind: cross_sell
+    question: Which core-range products go with a premium product that has sold?
+    from_range: premium
+    to_range: core
+    sold: true
+    expected:
+      - cushion-cover
+      - leather-keyring
+      - leather-passport-holder
+      - olive-wood-salad-servers
+      - olive-wood-spoon-set
+      - water-bottle-750
+      - wool-cushion-cover
+
+  - id: gift-candle
+    kind: contains
+    question: Which gift sets contain a candle?
+    terms: [candle]
+    expected:
+      - gift-set-candlelight
+      - gift-set-cosy-evening
+
+  - id: gift-wood
+    kind: contains
+    question: Which gift sets contain a wooden product?
+    terms: [wood]
+    expected:
+      - gift-set-reading-corner
+      - gift-set-serving

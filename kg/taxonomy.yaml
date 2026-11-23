@@ -1,0 +1,77 @@
+# The shop's product taxonomy (Session 7, Stage 16).
+# Fictitious: written for this unit from the shop's own listings, with department names
+# in the style of published retail taxonomies.
+#
+# Up to three levels: department, category, subcategory. Every concept except a department
+# "is a" kind of its broader concept, so anything true of all kitchen and dining products is
+# true of every drinkware product, two steps down. The hierarchy is deliberately uneven: some
+# categories have subcategories and some do not. Which category a product is in is recorded
+# in kg/product_categories.csv, not here.
+
+concepts:
+  - {id: kitchen-dining, name: Kitchen and dining}
+  - {id: cookware, name: Cookware, is_a: kitchen-dining}
+  - {id: bakeware, name: Bakeware, is_a: cookware}
+  - {id: pots-casseroles, name: Pots and casseroles, is_a: cookware}
+  - {id: tableware, name: Tableware, is_a: kitchen-dining}
+  - {id: dinnerware, name: Dinnerware, is_a: tableware}
+  - {id: drinkware, name: Drinkware, is_a: tableware}
+  - {id: serveware, name: Serveware, is_a: tableware}
+  - {id: tea-coffee, name: Tea and coffee, is_a: tableware}
+  - {id: table-accessories, name: Table accessories, is_a: tableware}
+  - {id: table-linen, name: Table linen, is_a: tableware}
+  - {id: kitchen-tools, name: Kitchen tools, is_a: kitchen-dining}
+  - {id: utensils, name: Utensils, is_a: kitchen-tools}
+  - {id: food-preparation, name: Food preparation, is_a: kitchen-tools}
+  - {id: kitchen-textiles, name: Kitchen textiles, is_a: kitchen-dining}
+  - {id: kitchen-storage, name: Kitchen storage, is_a: kitchen-dining}
+  - {id: barware, name: Barware, is_a: kitchen-dining}
+
+  - {id: home-textiles, name: Home textiles}
+  - {id: throws-blankets, name: Throws and blankets, is_a: home-textiles}
+  - {id: cushions, name: Cushions, is_a: home-textiles}
+  - {id: bedding, name: Bedding, is_a: home-textiles}
+  - {id: bath-linen, name: Bath linen, is_a: home-textiles}
+
+  - {id: home-decor, name: Home decor}
+  - {id: lighting, name: Lighting, is_a: home-decor}
+  - {id: clocks, name: Clocks, is_a: home-decor}
+  - {id: wall-art, name: Wall art, is_a: home-decor}
+  - {id: vases, name: Vases, is_a: home-decor}
+  - {id: candles-fragrance, name: Candles and home fragrance, is_a: home-decor}
+  - {id: candles, name: Candles, is_a: candles-fragrance}
+  - {id: home-fragrance, name: Home fragrance, is_a: candles-fragrance}
+  - {id: decorative-accessories, name: Decorative accessories, is_a: home-decor}
+  - {id: candle-holders, name: Candle holders, is_a: decorative-accessories}
+
+  - {id: garden, name: Garden}
+  - {id: plants-pots, name: Plants and pots, is_a: garden}
+  - {id: garden-tools, name: Garden tools, is_a: garden}
+
+  - {id: outdoor-travel, name: Outdoor and travel}
+  - {id: outdoor, name: Outdoor, is_a: outdoor-travel}
+  - {id: travel, name: Travel, is_a: outdoor-travel}
+
+  - {id: stationery-gifts, name: Stationery and gifts}
+  - {id: stationery, name: Stationery, is_a: stationery-gifts}
+  - {id: cards-wrapping, name: Cards and wrapping, is_a: stationery-gifts}
+  - {id: cards, name: Cards, is_a: cards-wrapping}
+  - {id: gift-wrap, name: Gift wrap, is_a: cards-wrapping}
+  - {id: books, name: Books, is_a: stationery-gifts}
+  - {id: gift-sets, name: Gift sets, is_a: stationery-gifts}
+
+  - {id: games-puzzles, name: Games and puzzles}
+  - {id: games, name: Games, is_a: games-puzzles}
+  - {id: puzzles, name: Puzzles, is_a: games-puzzles}
+
+  - {id: accessories, name: Fashion accessories}
+  - {id: scarves-ties, name: Scarves and ties, is_a: accessories}
+  - {id: leather-goods, name: Leather goods, is_a: accessories}
+
+  - {id: bath-body, name: Bath and body}
+  - {id: soap, name: Soap, is_a: bath-body}
+
+# The ranges the shop sells. A product belongs to one range (the range column of kg/products.csv).
+ranges:
+  - {id: core, name: Core range}
+  - {id: premium, name: Premium range, launched: "2026-08-03"}

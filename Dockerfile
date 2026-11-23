@@ -5,10 +5,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY pyproject.toml .
 COPY src ./src
 COPY config ./config
-COPY data ./data
 RUN pip install --no-cache-dir --no-deps .
-RUN shop-train
-ARG MODEL_VERSION=dev
-ENV MODEL_VERSION=${MODEL_VERSION}
+
+ARG APP_VERSION=dev
+ENV APP_VERSION=${APP_VERSION}
 EXPOSE 8888
 CMD ["uvicorn", "shop_model.api:app", "--host", "0.0.0.0", "--port", "8888"]

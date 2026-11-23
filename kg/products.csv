@@ -1,0 +1,79 @@
+product_id,class,name,material,range
+apron-striped-canvas,Product,"Apron, striped canvas",canvas,core
+bamboo-coaster-set,Product,"Bamboo coaster, set of 4",bamboo,core
+bath-towel-organic-cotton,Product,"Bath towel, organic cotton",cotton,core
+beeswax-candle,Product,"Beeswax candle, unscented",beeswax,core
+board-game-family-strategy,Product,"Board game, family strategy",,core
+brass-candle-holder,Product,Brass candle holder,brass,core
+cashmere-throw-charcoal,Product,"Cashmere throw, charcoal",cashmere,premium
+cast-iron-trivet,Product,Cast iron trivet,cast-iron,core
+cast-iron-casserole,Product,"Cast-iron casserole, enamelled",cast-iron,premium
+ceramic-coffee-mug,Product,"Ceramic coffee mug, 350 ml",ceramic,core
+ceramic-teapot,Product,"Ceramic teapot, 1 litre",ceramic,core
+cookbook-mediterranean,Product,"Cookbook, Mediterranean kitchen",,core
+copper-cocktail-set,Product,Copper cocktail set,copper,premium
+copper-watering-can,Product,"Copper watering can, 1.5 litre",copper,core
+cotton-tea-towel-set,Product,"Cotton tea towel, set of 2",cotton,core
+crystal-decanter,Product,Crystal decanter,crystal,premium
+cushion-cover,Product,"Cushion cover, 45 x 45 cm",,core
+enamel-pie-dish,Product,"Enamel pie dish, 24 cm",enamelled-steel,core
+fountain-pen-gold-nib,Product,"Fountain pen, gold nib",,premium
+framed-print-valletta,Product,"Framed print, A4, Valletta harbour",,core
+glass-carafe,Product,Glass carafe with lid,glass,core
+glass-storage-jar,Product,"Glass storage jar, 1 litre",glass,core
+greeting-card-set,Product,"Greeting card set, 6 cards",,core
+handmade-ceramic-vase,Product,"Handmade ceramic vase, large",ceramic,premium
+handmade-soap-lavender,Product,"Handmade soap bar, lavender",,core
+herb-garden-kit,Product,Herb garden kit,,core
+jigsaw-puzzle-1000,Product,"Jigsaw puzzle, 1000 pieces",,core
+leather-keyring,Product,Leather keyring,leather,core
+leather-weekender-bag,Product,Leather weekender bag,leather,premium
+linen-bedding-set-double,Product,"Linen bedding set, double",linen,premium
+linen-napkins-set,Product,"Linen napkins, set of 4",linen,core
+merino-wool-blanket,Product,Merino wool blanket,merino-wool,premium
+mortar-and-pestle,Product,"Mortar and pestle, granite",granite,core
+notebook-a5-dotted,Product,"Notebook, A5, dotted pages",,core
+oak-bookends,Product,"Oak bookends, hand-carved",oak,premium
+olive-wood-salad-servers,Product,Olive wood salad servers,olive-wood,core
+oven-gloves,Product,"Oven gloves, pair",,core
+picnic-blanket,Product,"Picnic blanket, waterproof backing",,core
+rattan-basket-medium,Product,"Rattan basket, medium",rattan,core
+reed-diffuser-orange-blossom,Product,"Reed diffuser, orange blossom",,core
+scented-candle-fig-cedar,Product,"Scented candle, fig and cedar",,core
+silk-scarf-floral,Product,"Silk scarf, floral print",silk,core
+silk-tie-hand-rolled,Product,"Silk tie, hand-rolled",silk,premium
+water-bottle-750,Product,"Stainless steel water bottle, 750 ml",stainless-steel,core
+stoneware-dinner-plate,Product,Stoneware dinner plate,stoneware,core
+table-lamp-linen-shade,Product,"Table lamp, linen shade",,core
+terracotta-plant-pot,Product,"Terracotta plant pot, 20 cm",terracotta,core
+walnut-serving-board,Product,"Walnut serving board, engraved",walnut,premium
+wall-clock-oak,Product,"Wall clock, oak frame",oak,core
+wooden-chopping-board,Product,"Wooden chopping board, small",wood,core
+wool-throw-blanket-grey,Product,"Wool throw blanket, grey",wool,core
+wrapping-paper-3-rolls,Product,"Wrapping paper, 3 rolls",paper,core
+linen-table-runner,Product,Linen table runner,linen,core
+stoneware-side-plate,Product,Stoneware side plate,stoneware,core
+glass-tumbler-set,Product,"Glass tumbler, set of 4",glass,core
+walnut-cheese-board,Product,Walnut cheese board,walnut,premium
+olive-wood-spoon-set,Product,"Olive wood spoon, set of 3",olive-wood,core
+cast-iron-skillet,Product,"Cast iron skillet, 26 cm",cast-iron,core
+enamel-baking-tray,Product,Enamel baking tray,enamelled-steel,core
+bamboo-serving-tray,Product,Bamboo serving tray,bamboo,core
+rattan-placemats,Product,"Rattan placemats, set of 4",rattan,core
+pillar-candle-ivory,Product,"Pillar candle, ivory",wax,core
+taper-candles-beeswax,Product,"Beeswax taper candles, set of 4",beeswax,core
+glass-candle-holder,Product,Glass candle holder,glass,core
+wool-cushion-cover,Product,"Wool cushion cover, 45 x 45 cm",wool,core
+linen-throw-natural,Product,"Linen throw, natural",linen,core
+stoneware-planter,Product,"Stoneware planter, 25 cm",stoneware,core
+copper-plant-mister,Product,Copper plant mister,copper,core
+christmas-card-set,Product,"Christmas card set, 10 cards",paper,core
+recycled-gift-wrap,Product,"Recycled gift wrap, 2 rolls",paper,core
+leather-passport-holder,Product,Leather passport holder,leather,core
+walnut-photo-frame,Product,Walnut photo frame,walnut,core
+gift-set-candlelight,GiftSet,Candlelight gift set,,core
+gift-set-cosy-evening,GiftSet,Cosy evening gift set,,core
+gift-set-serving,GiftSet,Serving gift set,,premium
+gift-set-tea-time,GiftSet,Tea-time gift set,,core
+gift-set-gardener,GiftSet,Gardener's gift set,,core
+gift-set-reading-corner,GiftSet,Reading corner gift set,,premium
