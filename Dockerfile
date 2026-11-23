@@ -8,5 +8,7 @@ COPY config ./config
 COPY data ./data
 RUN pip install --no-cache-dir --no-deps .
 RUN shop-train
+ARG MODEL_VERSION=dev
+ENV MODEL_VERSION=${MODEL_VERSION}
 EXPOSE 8888
 CMD ["uvicorn", "shop_model.api:app", "--host", "0.0.0.0", "--port", "8888"]

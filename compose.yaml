@@ -18,16 +18,11 @@ services:
       retries: 10
 
   api:
-    build: .
-    image: shop-model:0.3
+    image: shop-model:${MODEL_VERSION:-dev}
     ports:
       - "8888:8888"
     environment:
-      MODEL_VERSION: "0.3"
-      DATABASE_URL: postgresql://shop:${DB_PASSWORD}@db:5432/shop
-    depends_on:
-      db:
-        condition: service_healthy
+      MODEL_VERSION: "${MODEL_VERSION:-dev}"
 
 volumes:
   db-data:
