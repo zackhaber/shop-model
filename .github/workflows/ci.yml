@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: make install
+      - run: cp env.example .env
+      - name: Image name in lowercase
+        run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY_OWNER,,}/shop-model" >> "$GITHUB_ENV"
+      - run: make ci IMAGE="$IMAGE" SOURCE="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: make publish IMAGE="$IMAGE"
